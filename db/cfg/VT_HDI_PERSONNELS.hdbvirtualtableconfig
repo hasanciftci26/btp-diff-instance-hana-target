@@ -1,0 +1,10 @@
+{
+   "VT_HDI_PERSONNELS":{
+      "target":{
+         "remote":"CROSS_HDI",
+         "database":"1b52ccbb-61c0-4d60-9fec-07da61ebbe9f",
+         "schema":"B80280150E024D33A06FC8A3A55AF1D5",
+         "object":"PERSONNELS"
+      }
+   }
+}

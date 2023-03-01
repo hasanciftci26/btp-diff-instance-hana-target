@@ -1,0 +1,27 @@
+_schema-version: "2.1"
+ID: diff-hana-instance-cc-target
+version: 0.0.1
+modules:
+- name: diff-hana-ins-tr-db-deployer
+  type: hdb
+  path: db
+  requires:
+  - name: diff-hana-ins-tr-db
+    properties:
+      TARGET_CONTAINER: ~{hdi-container-name}
+  - name: cross-hdi-db-ups
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: cross-hdi-db-grantor
+      service: ~{cross-schema-ups}
+resources:
+- name: diff-hana-ins-tr-db
+  type: com.sap.xs.hdi-container
+  properties:
+    hdi-container-name: ${service-name}
+- name: cross-hdi-db-ups
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: cross-hdi-db-ups
+  properties:
+    cross-schema-ups: ${service-name}

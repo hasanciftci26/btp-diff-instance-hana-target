@@ -1,0 +1,14 @@
+{
+   "cross-hdi-db-grantor":{
+      "object_owner":{
+         "roles":[
+            "CROSS_HDI_UPS_ROLE"
+         ]
+      },
+      "application_user":{
+         "roles":[
+            "CROSS_HDI_UPS_ROLE"
+         ]
+      }
+   }
+}
